@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MyJS MVC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <link href="font/font.css" rel="stylesheet" type="text/css" charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="high/styles/shCoreDefault.css"/> 
+
+    <script type="text/javascript" src="high/scripts/shCore.js"></script> 
+    <script type="text/javascript" src="high/scripts/shBrushJScript.js"></script> 
+    <script type="text/javascript">
+      SyntaxHighlighter.defaults.gutter = false;
+      SyntaxHighlighter.all();
+    </script> 
+</head>
+<body>
+
+  <div id="content">
+
+    <a href="" id="download">download it</a>
+
+    <ul id="navigation">
+        <li><a href="#">ABOUT</a>|</li>
+        <li><a href="#">DEMOS</a>|</li>
+        <li><a href="#">DOCUMENTATION</a>|</li>
+        <li><a href="#">DOWNLOAD</a>|</li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+
+    <div class="post">
+        <h2>Welcome to the MyJS MVC project site</h2>
+        <p>
+			As the name probably suggests you, MyJS MVC is a model, view, controller based 
+			application framework written entierly in JavaScript.<br />
+			This a tipical "i didn't find any fitting solution so I created my own" story. 
+			<br />
+			<br />
+			When I stared to design the framework my goals were:
+			<ul>
+				<li>Small application footprint</li>
+				<li>Library independent</li>
+				<li>Modular system (Lazy loading, AJAX support)</li>
+				<li>Understandable structure</li>
+				<li>Familiar syntax</li>
+			</ul>
+			As we know "seeing is believing", so here is a Hello world example:
+        </p>
+        <pre class="brush: js;">
+    // Initialize MyJS MVC
+    app.model = new Model();
+    app.view = new View( app.model );
+    app.controller = new Controller();  
+
+    // Create model (it can be an array or an object as well)
+    app.model.set( 'header', 'Hello world!' );
+
+    // Create a view (add rendering logic)
+    app.view.register('list', function( data )
+    {
+        var tpl = '<h1>' + data.header + '</h1>';
+        return tpl;
+    });
+
+    // Add a controller
+    app.controller.register( 'hello_world', function()
+    {
+        // Connect the model to the template
+        app.view.assign( 'list', 'header' );
+
+        // Render the template into the element with the id: "dst" 
+        app.view.render( 'list', 'dst' ); 
+    });
+	
+	// Attach the controller to a button with an event
+    app.controller.toElement( $('my_button'), 'click', 'hello_world' );
+</pre>
+
+    </div>
+	
+	<div id="footer">MyJS MVC project, Created by <a href="http://tibor.szasz.hu">Tibor Szász</a> Copyright 2010.</div>
+  </div>
+
+</body>
+</html>

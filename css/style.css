@@ -1,0 +1,99 @@
+
+ * {
+    margin: 0px;
+    padding: 0px;
+ }
+ 
+ h2{
+    font-family: 'YanoneKaffeesatzBold', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #666;
+ }
+ 
+ p{
+    color: #666;
+    line-height: 19px;
+ }
+ 
+ pre{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    background: #eee;
+ }
+ 
+ 
+ #content{
+    font-family: Helvetica, Arial;
+    font-size: 12px;
+    width: 894px;
+    margin: auto;
+    background: url( ../images/header.png ) no-repeat center top;
+    padding-top: 157px;
+    position: relative;
+ }
+ 
+    #download{
+        position: absolute;
+        right: 100px;
+        top: 220px;
+        overflow: hidden;
+        width: 197px;
+        height: 53px;
+        text-indent: -1000px;
+        background: url( ../images/download.png ) no-repeat center -1px;
+    }
+
+        #download:hover{
+            background: url( ../images/download.png ) no-repeat center -52px;
+        }
+ 
+    #navigation{
+        position: absolute;
+        right: 100px;
+        top: 120px;
+    }
+    
+    #navigation li a{
+        padding-right: 10px;
+        text-decoration: none;
+        color: #0cdeff;
+    }
+    
+    #navigation li{
+        float: left;
+        list-style-type: none;
+        margin-right: 10px;
+        color: #0cdeff;
+    }
+ 
+    .post{
+        margin-top: 20px;
+        margin-left: 58px;
+        width: 500px;
+	    color: #666;
+    }
+    
+		.post ul{
+			margin: 15px;
+		}
+		.post ul li{
+			padding: 5px 20px 5px 30px;
+			list-style-type: none;
+			background: transparent url(../images/ok.png) no-repeat 7px center;
+		}
+
+#footer{
+	width: 700px;
+	margin-top: 40px;
+	margin-left: 58px;
+	padding: 30px;
+	text-align: center;
+	border-top: 1px solid #0cdeff;
+}
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>E-mail application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <script type="text/javascript" src="freejs_core.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
+</head>
+<body>
+    <img src="email_icon.png" id="logo" />
+    <h1>E-mail application demo | FreeJS MVC</h1>
+    <input type="button" value="Compose mail" id="compose" />
+    <input type="button" value="Sent mails" id="sent_mails" />
+
+    <div id="viewport"></div>
+
+    <form id="send_form">
+        <label>Send mail to:</label> <input type="text" id="target" />
+        <label>Subject:</label> <input type="text" id="subject" />
+        <label>Message:</label> <textarea id="message"></textarea>
+        <input type="button" value="Send mail" id="send_mail" />
+        <input type="button" value="Cancel" id="cancel_mail" />
+    </form>
+</body>
+</html>
+
